@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Event Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <h1>EventBook</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="event-card">
+      <h3 id="eventName"></h3>
+      <p id="eventDate"></p>
+      <p id="eventLocation"></p>
+      <p id="eventPrice"></p>
+
+      <button  id="bookBtn" class ="btn">Book Event</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+<script>
+  loadEventDetails();
+</script>
+
+</body>
+</h

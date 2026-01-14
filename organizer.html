@@ -1,0 +1,132 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <title>Organizer Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <script>
+      checkLogin();
+    </script>
+
+    <div class="navbar">
+      <h1>EventBook</h1>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">User Dashboard</a>
+        <a href="login.html" onclick="logout()">Logout</a>
+      </div>
+    </div>
+
+    <div class="dashboard">
+      <h2>Organizer Dashboard</h2>
+
+      <div class="form-box">
+        <h3>Add New Event</h3>
+        <input type="text" id="eventName" placeholder="Event Name">
+        <input type="date" id="eventDate">
+        <input type="text" id="eventLocation" placeholder="Location">
+        <input type="number" id="eventPrice" placeholder="Price" required>
+        <button onclick="addEvent()">Add Event</button>
+      </div>
+
+      <div class="box">
+        <h3>Your Events</h3>
+        <div id="eventList">No events added</div>
+      </div>
+    </div>
+
+    <script>
+      displayEvents();
+    </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Organizer Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+      <h1>Organizer Dashboard</h1>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">User Dashboard</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Add New Event</h2>
+
+      <input type="text" id="eventName" placeholder="Event Name" required>
+      <input type="date" id="eventDate" required>
+      <input type="text" id="eventLocation" placeholder="Location" required>
+      <input type="number" id="eventPrice" placeholder="Price" required>
+
+      <button onclick="addEvent()">Add Event</button>
+
+      <h2>All Events</h2>
+      <div id="eventList"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      displayEvents();
+    </script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Organizer Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="displayEvents()">
+
+  <div class="navbar">
+    <h1>EventBook</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="login.html" onclick="logout()">Logout</a>
+    </div>
+  </div>
+
+  <div class="organizer-page">
+    <div class="add-event">
+        <h3>Add New Event</h3>
+
+        <div class="row">
+          <input type="text" id="eventName" placeholder="Event Name">
+        </div><br>
+
+        <div class="row">
+          <input type="date" id="eventDate">
+          <input type="text" id="eventLocation" placeholder="Location">
+        </div><br>
+
+        <div class="row">
+          <input type="number" id="eventPrice" placeholder="Price">
+        </div><br>
+
+        <button class ="btn"onclick="addEvent()">Add Event</button>
+      </div>
+ 
+    <hr>
+
+    <h2>All Events</h2>
+    <div  class = "event-list" id="eventList"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    displayEvents();
+  </script>
+</body>
+</html>

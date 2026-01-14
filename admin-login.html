@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <div class="navbar">
+    <h1>Admin Login</h1>
+  </div>
+
+  <div class="form-box">
+    <input type="email" id="email" placeholder="Admin Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="adminLogin()">Login</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <script>
+    function adminLogin() {
+      fetch("http://localhost:3000/api/admin/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value
+        })
+      })
+      .then(res => {
+        if (!res.ok) throw new Error("Invalid admin");
+        return res.json();
+      })
+      .then(data => {
+        alert("Admin login successful");
+        window.location.href = "admin.html";
+      })
+      .catch(err => {
+        document.getElementById("error").innerText = "Invalid admin credentials";
+      });
+    }
+  </script>
+
+</body>
+</html>

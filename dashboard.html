@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <h1>EventBook</h1>
+    <div>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="index.html">Logout</a>
+    </div>
+  </div>
+  <div class="dashboard">
+    <h2>Admin Dashboard</h2>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h3>10</h3>
+        <p>Total Events</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>150</h3>
+        <p>Total Bookings</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>85</h3>
+        <p>Total Users</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+ 
+ <!--  <div class="navbar">
+    <h1>EventBook</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+  </div> -->
+
+  <div class="container">
+    <h2>My Bookings</h2>
+    
+    <div id="bookingList"></div>
+  </div>
+  
+  <script src="script.js"></script>
+  <!-- <script>
+    displayBookings();
+  </script>--> 
+  <script>
+    checkLogin();
+    loadUserBookings();
+  </script>
+  
+</body>
+</html>
